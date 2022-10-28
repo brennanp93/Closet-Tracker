@@ -21,17 +21,17 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     //update here
-    successRedirect: '/movies',
+    successRedirect: '/',
     // Change to what's best for YOUR app
     //update here
-    failureRedirect: '/movies'
+    failureRedirect: '/items'
   }
 ));
 
 router.get('/logout', function(req, res) {
   req.logout(function() {
     // Change path for your "landing" page
-    res.redirect('/movies');
+    res.redirect('/items');
   });
 });
 
