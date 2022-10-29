@@ -13,12 +13,13 @@ a {
   align-items: center;
   height: 34px;
 }
+
 .login img {
   height: 30px;
 }
 
 .user-avatar {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
@@ -26,4 +27,56 @@ a {
 .user-avatar img {
   border-radius: 50%;
   height: 40px;
+}
+
+#login-box {
+  border-color: black;
+  border-width: 2px;
+  border-style: dashed;
+}
+table {
+  font-size: 20px;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#list td:nth-child(2), #list td:nth-child(3){
+  min-width: 100px;
+}
+
+#list a {
+  border-radius: 4px;
+  background-color: #B8C0C2;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#list a:hover {
+  background-color: white;
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav > a:hover:not(.active) {
+  color: white;
+  background-color: #424748;
+}
+
+nav > a.active {
+  color: white;
+  cursor: default;
 }

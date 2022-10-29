@@ -8,23 +8,19 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <nav><a href="/">HOME</a></nav>
-  <!-- <nav>
-    <a href="/flights/new" id="nav1">New Flight</a>
-    <a href="/flights">All Flights</a>
-  </nav> -->
+    <!-- <nav><a href="/">HOME</a></nav> -->
+    
+  <nav>
+      <!-- <img src="/images/camera.svg"> -->
+      <a href="/closet" <%- title === 'All Closet Items' ? 'class="active"' : '' %>>ALL Closet Items</a>
+      <% if (user) { %>
+        <a href="/closet/new" <%- title === 'Add Item' ? 'class="active"' : '' %>>ADD Item</a>
+        <a> <%= user.name %></a> 
+        <!-- <img class="user-avatar" src="<%= user.avatar%> " alt="avatar">         -->
+        <a href="/logout">LOG OUT</a>
+        <% } else { %>
+      <a href="/auth/google" class="login">LOG IN <img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
+  </nav>       
   <main>
   
-
-
-    <nav>
-        <!-- <img src="/images/camera.svg"> -->
-        <a href="/closet" <%- title === 'All Closet Items' ? 'class="active"' : '' %>>ALL Closet Items</a>
-        <% if (user) { %>
-          <a href="/items/new"    <%- title === 'Add Item' ? 'class="active"' : '' %>>ADD Item</a>
-          <a href="/logout">LOG OUT</a>
-        <div> <img class="user-avatar" src="<%= user.avatar%> " alt="avatar"> <%= user.name %></div>
-        <% } else { %>
-          <a href="/auth/google" class="login">LOG IN <img src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } %>
-      </nav>

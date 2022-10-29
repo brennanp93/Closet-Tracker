@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+<h2><%= title %></h2>
+
+<section id="show-page">
+    <div><img class="login" src="<%= item.image %>"></div>
+    <br>
+    <div>Brand:</div>
+    <div><%= item.brand %></div>
+    <br>
+    <div>Purchase Location:</div>
+    <div><%= item.purchaseLocation %></div>
+    <br>
+    <div>size:</div>
+    <div><%= item.size %></div>
+    <div>Notes:</div>
+    <div><%= item.additionalInfo %></div>
+    <br>
+</section>
+
+<%- include('../partials/footer') %>

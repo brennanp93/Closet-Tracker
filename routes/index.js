@@ -4,8 +4,13 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'This Is The Home Page' });
 });
+
+
+
+
+
 
 router.get('/auth/google', passport.authenticate(
   // Which passport strategy is being used?
@@ -21,17 +26,17 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     //update here
-    successRedirect: '/',
+    successRedirect: './closet',
     // Change to what's best for YOUR app
     //update here
-    failureRedirect: '/items'
+    failureRedirect: '/'
   }
 ));
 
 router.get('/logout', function(req, res) {
   req.logout(function() {
     // Change path for your "landing" page
-    res.redirect('/items');
+    res.redirect('/');
   });
 });
 
