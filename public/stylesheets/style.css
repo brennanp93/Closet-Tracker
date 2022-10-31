@@ -67,7 +67,7 @@ table td {
 nav > a {
   margin: 20px;
   text-decoration: none;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 5px;
 }
 
@@ -81,6 +81,21 @@ nav > a.active {
   cursor: default;
 }
 
-img {
-  height: 50px;
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(autofill, 2fr);
+  grid-gap: 15px;
 }
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 25%;
+}
+#border-box {
+  margin-top: 20px;
+  margin: 0, 50px, 0, 50px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5%;
+ }

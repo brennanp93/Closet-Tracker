@@ -1,23 +1,25 @@
 <%- include('../partials/header') %>
 
 
-<!-- <h1><%= title %></h1> -->
+    <!-- <h1><%= title %></h1> -->
 
-<table id="list">
-    <thead>
-      <tr>
-        <th>Brand</th>
-        <th>Image</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% item.forEach(function(i) { %>
-        <tr>
-          <td><%= i.brand %></td>
-          <td><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></td>
-        </tr>
+    <!-- <div class="image-grid">
+        <div >
+        <% item.forEach(function(i) { %>
+           <div><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></div>
+        </div>
+    </div>
         <% }); %>
-      </tbody>
-    </table>
+        <br>
+    <% if (user) { %>
+    <a href="/closet/new" <%- title === 'Add Item' ? 'class="active"' : '' %>>Add An Item</a>
+    <% } else { } %> -->
+  
 
-<%- include('../partials/footer') %>
+<div id="border-box" class="image-grid">
+    <% item.forEach(function(i) { %>
+    <figure><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></figure>
+    <% }); %>
+</div>
+
+    <%- include('../partials/footer') %>
