@@ -13,9 +13,30 @@
     <br>
     <div>size:</div>
     <div><%= item.size %></div>
-    <div>Notes:</div>
+    <!-- <div>Notes:</div>
     <div><%= item.additionalInfo %></div>
-    <br>
+    <br> -->
 </section>
+
+<h3>Add Additional Info?</h3>
+<form id="new-form" action="/closet/<%= item._id %>/additionalInfo" method="POST">
+    <label>Notes:</label>
+    <input type="text" name="notes">
+    <label for="">Sold/Donated?</label>
+    <input type="checkbox" name="soldDonated" checked >
+    <input type="submit" value="Add Notes">
+</form>
+
+<h3>Notes</h3>
+<% if (item.additionalInfo.length) { %>
+    <section>
+        <% item.additionalInfo.forEach(function(info) { %>
+        <div>+<%= info.notes %></div>
+        <div>+<%= info.soldDonated ? 'Yes' : 'No' %></div>
+    </section>
+<% }); %>
+<% } else { %>
+    <h5>no Info yet</h5>
+    <% } %>
 
 <%- include('../partials/footer') %>

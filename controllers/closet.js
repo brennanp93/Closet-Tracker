@@ -31,6 +31,7 @@ function create(req, res) {
     // for (let key in req.body) {
     //   if (req.body[key] === '') delete req.body[key];
     // }
+    req.body.soldDonated = !!req.body.soldDonated;
     const item = new Inventory(req.body);
     item.save(function(err) {
       if (err) return res.redirect('/closet/new');
