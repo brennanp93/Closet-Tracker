@@ -15,7 +15,7 @@
       <a href="/closet" <%- title === 'All Closet Items' ? 'class="active"' : '' %>>ALL Closet Items</a>
       <% if (user) { %>
         <a href="/closet/new" <%- title === 'Add Item' ? 'class="active"' : '' %>>ADD Item</a>
-        <a> <%= user.name %></a> 
+        <a><span>Logged in as: </span> <strong><%= user.name %></strong></a> 
         <!-- <img class="user-avatar" src="<%= user.avatar%> " alt="avatar">         -->
         <a href="/logout">LOG OUT</a>
         <% } else { %>

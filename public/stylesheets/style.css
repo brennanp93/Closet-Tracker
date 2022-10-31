@@ -80,3 +80,7 @@ nav > a.active {
   color: white;
   cursor: default;
 }
+
+img {
+  height: 50px;
+}

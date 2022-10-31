@@ -14,7 +14,7 @@
       <% item.forEach(function(i) { %>
         <tr>
           <td><%= i.brand %></td>
-          <td><img class="login" src="<%= i.image %>"><a href="/closet/<%=i._id%>"></a></td>
+          <td><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></td>
         </tr>
         <% }); %>
       </tbody>

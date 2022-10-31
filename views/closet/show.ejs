@@ -1,42 +1,71 @@
 <%- include('../partials/header') %>
 
-<h2><%= title %></h2>
+<h2>Item Type:  <%= title %></h2>
 
 <section id="show-page">
     <div><img class="login" src="<%= item.image %>"></div>
     <br>
     <div>Brand:</div>
-    <div><%= item.brand %></div>
+    <div>
+        <%= item.brand %>
+    </div>
     <br>
     <div>Purchase Location:</div>
-    <div><%= item.purchaseLocation %></div>
+    <div>
+        <%= item.purchaseLocation %>
+    </div>
     <br>
     <div>size:</div>
-    <div><%= item.size %></div>
+    <div>
+        <%= item.size %>
+    </div>
     <!-- <div>Notes:</div>
-    <div><%= item.additionalInfo %></div>
-    <br> -->
+<div><%= item.additionalInfo %></div>
+<br> -->
 </section>
 
 <h3>Add Additional Info?</h3>
-<form id="new-form" action="/closet/<%= item._id %>/additionalInfo" method="POST">
+<form id="new-form"  method="POST" action="/closet/<%= item._id %>/additionalInfo">
     <label>Notes:</label>
     <input type="text" name="notes">
     <label for="">Sold/Donated?</label>
-    <input type="checkbox" name="soldDonated" checked >
+    <input type="checkbox" name="soldDonated" >
     <input type="submit" value="Add Notes">
 </form>
 
-<h3>Notes</h3>
+
+
 <% if (item.additionalInfo.length) { %>
-    <section>
-        <% item.additionalInfo.forEach(function(info) { %>
-        <div>+<%= info.notes %></div>
-        <div>+<%= info.soldDonated ? 'Yes' : 'No' %></div>
-    </section>
-<% }); %>
-<% } else { %>
-    <h5>no Info yet</h5>
-    <% } %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Notes</th>
+            <th>Sold?</th>
+        </tr>
+    </thead>
+    <% item.additionalInfo.forEach(function(info) { %>
+    <tbody>
+        <tr>
+            <td>
+                <%= info.createdAt.toLocaleDateString() %>
+            </td>
+            <td>
+                <%= info.notes %>
+            </td>
+            <td>
+                <%= info.soldDonated ? 'Yes' : 'No' %>
+            </td>
+        </tr>
+        <% }); %>
+            <% } else { %>
+    </tbody>
+</table>
+
+<h5>no Info yet</h5>
+<% } %>
+<br>
+
 
 <%- include('../partials/footer') %>

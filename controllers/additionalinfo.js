@@ -9,7 +9,7 @@ function create(req, res) {
     Inventory.findById(req.params.id, function(err, item) {
         item.additionalInfo.push(req.body);
         item.save(function(err) {
-            res.redirect('/closet');
+            res.redirect(`/closet/${item.id}`);
         });
     });
-}
+};
