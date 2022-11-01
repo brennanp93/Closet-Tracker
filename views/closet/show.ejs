@@ -1,29 +1,27 @@
 <%- include('../partials/header') %>
+<div class="single-item-page">
+  <h2><span>Category:</span> <%= title %></h2>
 
-  <h2>Item Type: <%= title %>
-  </h2>
+  <div><img class="single-image" src="<%= item.image %>"></div>
 
-  <section id="show-page">
-    <div><img class="login" src="<%= item.image %>"></div>
-    <br>
-    <div>Brand:</div>
-    <div>
-      <%= item.brand %>
-    </div>
-    <br>
-    <div>Purchase Location:</div>
-    <div>
-      <%= item.purchaseLocation %>
-    </div>
-    <br>
-    <div>size:</div>
-    <div>
-      <%= item.size %>
-    </div>
-    <!-- <div>Notes:</div>
-<div><%= item.additionalInfo %></div>
-<br> -->
   </section>
+<table>
+  <thead>
+    <tr>
+      <th>Brand:</th>
+      <th>Purchase Location:</th>
+      <th>Size:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= item.brand %></td>
+      <td><%= item.purchaseLocation %></td>
+      <td> <%= item.size %></td>
+    </tr>
+  </tbody>
+</table>
+
 
   <h3>Add Additional Info?</h3>
   <form id="new-form" method="POST" action="/closet/<%= item._id %>/additionalInfo">
@@ -44,19 +42,19 @@
             <th>Date</th>
             <th>Notes</th>
             <th>Sold?</th>
+            <th></th>
           </tr>
         </thead>
         <% item.additionalInfo.forEach(function(info) { %>
           <tbody>
             <tr>
+              <td><%= info.createdAt.toLocaleDateString() %></td>
+              <td><%= info.notes %></td>
+              <td><%= info.soldDonated ? 'Yes' : 'No' %></td>
               <td>
-                <%= info.createdAt.toLocaleDateString() %>
-              </td>
-              <td>
-                <%= info.notes %>
-              </td>
-              <td>
-                <%= info.soldDonated ? 'Yes' : 'No' %>
+                <form action="/closet/<%= info._id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+              </form>
               </td>
             </tr>
             <% }); %>
@@ -64,9 +62,9 @@
       </table>
     </div>
     <% } else { %>
-    <h5>no Info yet</h5>
+    <h5>You have not added additional information yet. </h5>
     <% } %>
 
-
+  </div>
 
         <%- include('../partials/footer') %>

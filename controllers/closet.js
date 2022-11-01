@@ -10,7 +10,7 @@ module.exports = {
 function show(req, res) {
     // console.log(req.params.id);
     Inventory.findById(req.params.id, function(err, item, title) {
-        res.render('closet/show', {item, title: item.itemType})
+        res.render('closet/show', {item, title: item.itemType.toUpperCase()})
         
     })
     
