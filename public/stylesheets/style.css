@@ -10,11 +10,12 @@ body {
 a {
   color: #00B7FF;
 }
-.login {
+.login-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 34px;
+  width: 34px;
 }
 
 .login img {
@@ -27,9 +28,10 @@ a {
   align-items: center;
 }
 
-.user-avatar img {
+.user-avatar {
   border-radius: 50%;
-  height: 40px;
+  height: 50px;
+  width: 50px;
 }
 
 #login-box {

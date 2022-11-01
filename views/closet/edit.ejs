@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+
+
+<div id="new-item-form-box">
+    <h2>EDIT</h2>
+    <form id="new-form" action="/closet/<%= item.id %>?_method=PUT" method="POST">
+      <div id="new-item-form"><label>Item Type:</label>
+        <select name="itemType">
+          <option value="T-Shirt">T-Shirt</option>
+          <option value="Pant">Pant</option>
+          <option value="Shirt">Shirt</option>
+          <option value="Boots/Shoes">Boots/Shoes</option>
+          <option value="Hat">Hat</option>
+          <option value="Jacket">Jacket</option>
+        </select> 
+      </div>
+      <div id="new-item-form">
+      <label>Brand:</label>
+        <input type="text" name="brand" value="<%= item.brand %>">
+      </div id="new-item-form"> 
+      <div id="new-item-form">
+        <label>Size:</label>
+        <input type="text" name="size" value="<%= item.size %>">
+      </div>  
+      <div id="new-item-form">
+        <label>Purchase Location:</label>
+        <input type="text" name="purchaseLocation" value="<%= item.purchaseLocation %>">
+      </div> 
+      <div id="new-item-form">
+        <label>Add Image:</label>
+        <input type="text" name="image" value="<%= item.image %>">
+      </div>  
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+
+    <%- include('../partials/footer') %>

@@ -1,18 +1,6 @@
 <%- include('../partials/header') %>
 
 
-
-<!-- <div class="image-grid">
-    <div >
-        <% item.forEach(function(i) { %>
-            <div><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></div>
-        </div>
-    </div>
-    <% }); %>
-    <br>
-    <% if (user) { %>
-        <a href="/closet/new" <%- title === 'Add Item' ? 'class="active"' : '' %>>Add An Item</a>
-        <% } else { } %> -->
         
 <h1><%= title %></h1>
 
@@ -21,5 +9,9 @@
     <figure class="image-format"><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></figure>
     <% }); %>
 </div>
-
-    <%- include('../partials/footer') %>
+<% if (user) { %>
+    <form action="/closet/new"">
+    <button type="submit"> <a <%- title === 'Add Item' ? 'class="active"' : '' %>></a>Add Item</button>
+</form>
+<% } else { }%>
+<%- include('../partials/footer') %>
