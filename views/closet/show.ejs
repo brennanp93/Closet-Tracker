@@ -46,9 +46,12 @@
             <td><%= info.notes %></td>
             <td><%= info.soldDonated ? 'Yes' : 'No' %></td>
             <td>
+            
+             <%if (user?._id.equals(info.user)) {%>
               <form action="/closet/<%= info._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
               </form>
+                <% } %>
             </td>
           </tr>
           <% }); %>

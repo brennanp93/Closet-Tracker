@@ -8,7 +8,7 @@ module.exports = {
 function deleteInfo(req,res) {
     Inventory.findOne({
         'additionalInfo._id': req.params.id,
-        // 'reviews.user': req.user._id
+        'additionalInfo.user': req.user._id
     }). then (function(item) {
         if (!item) return res.redirect('/closet');
         item.additionalInfo.remove(req.params.id);
@@ -23,6 +23,10 @@ function deleteInfo(req,res) {
 function create(req, res) {
     req.body.soldDonated = !!req.body.soldDonated;
     Inventory.findById(req.params.id, function(err, item) {
+        req.body.user = req.user._id;
+        req.body.userName = req.user.name;
+        req.body.userAvatar = req.user.avatar;
+
         item.additionalInfo.push(req.body);
         item.save(function(err) {
             res.redirect(`/closet/${item.id}`);

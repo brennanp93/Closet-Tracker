@@ -7,20 +7,21 @@ module.exports = {
     show
 };
 
-function show(req, res) {
-    // console.log(req.params.id);
-    Inventory.findById(req.params.id, function(err, item, title) {
-        res.render('closet/show', {item, title: item.itemType.toUpperCase()})
-        
-    })
-    
-};
-
 function index(req, res) {
     Inventory.find({}, function(err, item) {
         res.render('closet/index', { title: "my closet", item });
     })
 };
+
+function show(req, res) {
+    // console.log(req.params.id);
+    Inventory.findById(req.params.id, function(err, item, title) {
+        res.render('closet/show', {item, title: item.itemType})
+        
+    })
+    
+};
+
 
 function create(req, res) {
     // // Remove leading/trailing spaces
