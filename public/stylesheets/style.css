@@ -1,7 +1,7 @@
 
 body {
-  grid-template-columns: repeat(3, 3fr);
-  grid-template-rows: repeat(1, 2fr);
+  /* grid-template-columns: repeat(3, 3fr);
+  grid-template-rows: repeat(autofill, 2fr); */
   
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: red;
@@ -98,8 +98,9 @@ img {
 }
 figure:hover {
   transform: scale(1.05);
-  opacity: 1;
+  opacity: .5;
 }
+
 #border-box {
   padding: 10px;
   margin: 100px;
@@ -109,7 +110,7 @@ figure:hover {
   background-color: rgb(231, 231, 231);
  }
  .image-format {
-  opacity: 0.5;
+  opacity: 1;
  }
 #new-item-form-box {
   display: grid;
@@ -124,13 +125,21 @@ figure:hover {
   width: 100px;
 }
 .single-image {
-  height: 250px;
-  max-width: 350px;
+
+  height: 75%;
+  width: 75%;
+  /* padding: 10%; */
 }
-.single-item-page {
+.category-and-image {
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  grid-template-rows: repeat(3, 2fr);
-  align-items:flex-end;
+  grid-template: auto;
+  /* grid-template-columns: repeat(3,  3fr); */
+  grid-gap: 10px;
+ 
+  /* grid-template-rows: 2fr 1fr; */
+  margin-top: 5%;
   justify-content: center;
-}
+  /* position: relative; */
+  border-style: solid;
+  border-color: black;
+ }

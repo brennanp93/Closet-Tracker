@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
 
 
-    <!-- <h1><%= title %></h1> -->
 
-    <!-- <div class="image-grid">
-        <div >
+<!-- <div class="image-grid">
+    <div >
         <% item.forEach(function(i) { %>
-           <div><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></div>
+            <div><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></div>
         </div>
     </div>
-        <% }); %>
-        <br>
+    <% }); %>
+    <br>
     <% if (user) { %>
-    <a href="/closet/new" <%- title === 'Add Item' ? 'class="active"' : '' %>>Add An Item</a>
-    <% } else { } %> -->
-  
+        <a href="/closet/new" <%- title === 'Add Item' ? 'class="active"' : '' %>>Add An Item</a>
+        <% } else { } %> -->
+        
+<h1><%= title %></h1>
 
 <div id="border-box" class="image-grid">
     <% item.forEach(function(i) { %>
