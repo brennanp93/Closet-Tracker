@@ -1,12 +1,22 @@
+main {
+  /* background-color: aqua; */
+
+}
 
 body {
   /* grid-template-columns: repeat(3, 3fr);
   grid-template-rows: repeat(autofill, 2fr); */
   
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: red;
+  /* color: red; */
 }
 
+nav {
+  background-color: bisque;
+}
+footer {
+  background-color: bisque;
+}
 a {
   color: #00B7FF;
 }
@@ -54,6 +64,7 @@ table td {
   border-bottom: 2px solid black;
 }
 
+
 /* #list td:nth-child(2), #list td:nth-child(3){
   min-width: 100px;
 } */
@@ -87,12 +98,8 @@ nav > a.active {
   cursor: default;
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  grid-template-rows: repeat(autofill, 2fr);
-  grid-gap: 15px;
-}
+
+
 img {
   height: 100%;
   width: 100%;
@@ -103,14 +110,19 @@ figure:hover {
   opacity: .5;
 }
 
-#border-box {
+#closet-border-box {
   padding: 10px;
   margin: 100px;
   border-style: solid;
   border-color: black;
   border-radius: 5%;
   background-color: rgb(231, 231, 231);
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-template-rows: repeat(autofill, 2fr);
+  grid-gap: 15px;
  }
+
  .image-format {
   opacity: 1;
  }
@@ -146,3 +158,20 @@ figure:hover {
   border-style: solid;
   border-color: black;
  }
+
+ .home-page-title {
+  color: blue;
+  font: 25px;
+}
+#closet-page-title {
+  color: black;
+  font-family: 'Permanent Marker', cursive;
+}
+/*       -----------------------Not in use -------------------- */
+
+/* .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-template-rows: repeat(autofill, 2fr);
+  grid-gap: 15px;
+} */

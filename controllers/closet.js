@@ -41,12 +41,11 @@ function edit(req, res) {
 
 function index(req, res) {
     Clothes.find({user: req.user._id}, function(err, item) {
-        res.render('closet/index', { title: "my closet", item });
+        res.render('closet/index', { title: "My Closet", item });
     })
 };
 
 function show(req, res) {
-    // console.log(req.params.id);
     Clothes.findById(req.params.id, function(err, item, title) {
         res.render('closet/show', {item, title: item.itemType})   
     })
@@ -60,7 +59,6 @@ function create(req, res) {
     const item = new Clothes(req.body);
     item.save(function(err) {
       if (err) return res.redirect('/closet/new');
-      console.log(item);
       res.redirect(`/closet/${item._id}`);
     });
   }

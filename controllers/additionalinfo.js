@@ -21,13 +21,11 @@ function deleteInfo(req,res) {
 }
 
 function create(req, res) {
-    console.log("note create")
     req.body.soldDonated = !!req.body.soldDonated;
     Inventory.findById(req.params.id, function(err, item) {
         req.body.user = req.user._id;
         req.body.userName = req.user.name;
         req.body.userAvatar = req.user.avatar;
-        console.log(req.body)
         item.additionalInfo.push(req.body);
         item.save(function(err) {
             res.redirect(`/closet/${item.id}`);

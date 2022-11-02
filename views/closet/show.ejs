@@ -13,7 +13,7 @@
       <th>Brand:</th>
       <th>Purchase Location:</th>
       <th>Size:</th>
-      <th></th>
+      
     </tr>
   </thead>
   <tbody>
@@ -21,15 +21,15 @@
       <td><%= item.brand %></td>
       <td><%= item.purchaseLocation %></td>
       <td> <%= item.size %></td>
-      <td>
-        <%if (user?._id.equals(item.user)) {%>
-          <a href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
-        <% } %>
-      </td>
+      
     </tr>
   </tbody>
 </table>
-
+<div>
+  <%if (user?._id.equals(item.user)) {%>
+    <a href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
+    <% } %>
+</div>
 
 
 
