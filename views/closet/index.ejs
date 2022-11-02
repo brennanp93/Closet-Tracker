@@ -6,12 +6,15 @@
 
 <div id="closet-border-box">
     <% item.forEach(function(i) { %>
-    <figure class="image-format"><a href="/closet/<%=i._id%>"><img src="<%= i.image %>"></a></figure>
+    <figure class="image-format"><a href="/closet/<%=i._id%>"><img id="grid-images" src="<%= i.image %>"></a></figure>
     <% }); %>
 </div>
 <% if (user) { %>
-    <form action="/closet/new"">
-    <button type="submit"> <a <%- title === 'Add Item' ? 'class="active"' : '' %>></a>Add Item</button>
-</form>
+    <div id="add-item-button">
+        <form action="/closet/new"">
+        <button type="submit"> <a <%- title === 'Add Item' ? 'class="active"' : '' %>></a>Add Item</button>
+        </form>
+    </div>
 <% } else { }%>
+
 <%- include('../partials/footer') %>

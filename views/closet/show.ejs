@@ -25,17 +25,19 @@
     </tr>
   </tbody>
 </table>
+
 <div>
   <%if (user?._id.equals(item.user)) {%>
     <a href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
     <% } %>
 </div>
+</div>
 
 
 
-
+<div class="additional-info">
 <% if (item.additionalInfo.length) { %>
-  <div>
+  <!-- <div > -->
     <table>
       <thead>
         <tr>
@@ -63,7 +65,7 @@
           <% }); %>
         </tbody>
       </table>
-    </div>
+    <!-- </div> -->
     <% } else { %>
       <h5>You have not added additional information yet. </h5>
       <h3>Add Additional Info?</h3>
@@ -76,6 +78,6 @@
         <input type="checkbox" name="soldDonated">
         <input type="submit" value="Add Notes">
       </form>
-      
-    </div>
+</div>      
+    
         <%- include('../partials/footer') %>
