@@ -25,7 +25,7 @@ const additionalInfoSchema = new Schema({
 const clothesSchema = new Schema({
     itemType: {
         type: String, 
-        enum: ['T-Shirt', 'Pant', 'Shirt', 'Boots/Shoes', 'Hat', 'Jacket']
+        enum: ['T-Shirt', 'Pants', 'Shirt', 'Boots/Shoes', 'Hat', 'Jacket']
     },
     brand: {
         type: String

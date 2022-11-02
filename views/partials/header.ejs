@@ -7,7 +7,7 @@
   <title>Closet Tracker</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
@@ -15,7 +15,7 @@
   <nav>
       <!-- <img src="/images/camera.svg"> -->
       <% if (user) { %>
-        <div><a><span>Logged in as: </span> <strong><%= user.name %></strong></a> </div>
+        <a><span>Logged in as: </span> <strong><%= user.name %></strong></a>
         <div>
           <a href="/closet" <%- title === 'All Closet Items' ? 'class="active"' : '' %>>My Closet</a></div>
        <div>

@@ -1,10 +1,11 @@
 <%- include('../partials/header') %>
 
-
+<div class="new-item-page" >
 <div id="new-item-form-box">
-    <h2>EDIT</h2>
+    <h2>Edit Item Details </h2>
     <form id="new-form" action="/closet/<%= item.id %>?_method=PUT" method="POST">
-      <div id="new-item-form"><label>Item Type:</label>
+      <div id="new-item-form">
+        <!-- <label>Item Type:</label> -->
         <select name="itemType">
           <option value="T-Shirt">T-Shirt</option>
           <option value="Pant">Pant</option>
@@ -15,23 +16,23 @@
         </select> 
       </div>
       <div id="new-item-form">
-      <label>Brand:</label>
+      <!-- <label>Brand:</label> -->
         <input type="text" name="brand" value="<%= item.brand %>">
       </div id="new-item-form"> 
       <div id="new-item-form">
-        <label>Size:</label>
+        <!-- <label>Size:</label> -->
         <input type="text" name="size" value="<%= item.size %>">
       </div>  
       <div id="new-item-form">
-        <label>Purchase Location:</label>
+        <!-- <label>Purchase Location:</label> -->
         <input type="text" name="purchaseLocation" value="<%= item.purchaseLocation %>">
       </div> 
       <div id="new-item-form">
-        <label>Add Image:</label>
+        <!-- <label>Add Image:</label> -->
         <input type="text" name="image" value="<%= item.image %>">
       </div>  
         <input type="submit" value="Submit">
     </form>
     </div>
-
+</div>
     <%- include('../partials/footer') %>

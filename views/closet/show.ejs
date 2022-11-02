@@ -2,9 +2,9 @@
 
 <div class="category-and-image">
 
-  <h2><span>Category:</span> <%= title %></h2>
+  <h1><span>Category:</span> <%= title %></h1>
 
-  <div><img class="single-image" src="<%= item.image %>"></div>
+  <img class="single-image" src="<%= item.image %>">
 
 
 <table>
@@ -13,7 +13,7 @@
       <th>Brand:</th>
       <th>Purchase Location:</th>
       <th>Size:</th>
-      
+      <th class="edit-delete-button"></th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +21,9 @@
       <td><%= item.brand %></td>
       <td><%= item.purchaseLocation %></td>
       <td> <%= item.size %></td>
+      <td class="edit-delete-button" >
+        
+      </td>
       
     </tr>
   </tbody>
@@ -31,11 +34,11 @@
     <a href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
     <% } %>
 </div>
-</div>
 
 
 
-<div class="additional-info">
+
+
 <% if (item.additionalInfo.length) { %>
   <!-- <div > -->
     <table>
@@ -44,7 +47,7 @@
           <th>Date</th>
           <th>Notes</th>
           <th>Sold?</th>
-          <th></th>
+          <th class="edit-delete-button"></th>
         </tr>
       </thead>
       <% item.additionalInfo.forEach(function(info) { %>
@@ -53,11 +56,11 @@
             <td><%= info.createdAt.toLocaleDateString() %></td>
             <td><%= info.notes %></td>
             <td><%= info.soldDonated ? 'Yes' : 'No' %></td>
-            <td>
+            <td class="edit-delete-button">
             
              <%if (user?._id.equals(info.user)) {%>
               <form action="/closet/<%= info._id %>?_method=DELETE" method="POST">
-                <button type="submit">DELETE</button>
+                <button type="submit">X</button>
               </form>
                 <% } %>
             </td>
@@ -68,16 +71,17 @@
     <!-- </div> -->
     <% } else { %>
       <h5>You have not added additional information yet. </h5>
-      <h3>Add Additional Info?</h3>
+      <!-- <h3>Add Additional Info?</h3> -->
       <% } %>
-      
-      <form id="new-form" method="POST" action="/closet/<%= item._id %>/additionalInfo">
-        <label>Notes:</label>
-        <input type="text" name="notes">
-        <label for="">Sold/Donated?</label>
-        <input type="checkbox" name="soldDonated">
-        <input type="submit" value="Add Notes">
-      </form>
-</div>      
+      <div id="notes-form">
+        <form id="new-form" method="POST" action="/closet/<%= item._id %>/additionalInfo">
+          <label>Notes:</label>
+          <input type="text" name="notes">
+          <label for="">Sold/Donated?</label>
+          <input type="checkbox" name="soldDonated">
+          <input type="submit" value="Add Notes">
+        </form>
+      </div>
     
+</div>
         <%- include('../partials/footer') %>
