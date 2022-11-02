@@ -56,14 +56,6 @@ function show(req, res) {
 
 
 function create(req, res) {
-    // // Remove leading/trailing spaces
-    // req.body.brand = req.body.brand.trim();
-    // // Split if it's not an empty string
-    // if (req.body.brand) req.body.brand = req.body.brand.split(/\s*,\s*/);
-    // // Delete empty properties on req.body for defaults to happen 
-    // for (let key in req.body) {
-    //   if (req.body[key] === '') delete req.body[key];
-    // }
     req.body.soldDonated = !!req.body.soldDonated;
     const item = new Inventory(req.body);
     item.save(function(err) {

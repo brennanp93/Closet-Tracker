@@ -22,9 +22,11 @@
       <td><%= item.purchaseLocation %></td>
       <td> <%= item.size %></td>
       <td>
+        <%if (user?._id.equals(item.user)) {%>
         <form action="/closet/<%= item._id%>/edit">
           <button type="submit">Edit</button>
         </form>
+        <% } %>
       </td>
     </tr>
   </tbody>

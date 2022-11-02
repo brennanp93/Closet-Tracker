@@ -15,7 +15,7 @@ function deleteInfo(req,res) {
         item.save().then(function() {
           res.redirect(`/closet/${item._id}`);
         }).catch(function(err) {
-          return next(err);
+        //   return next(err);
         });
       });
 }

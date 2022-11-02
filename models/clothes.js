@@ -42,7 +42,14 @@ const inventorySchema = new Schema({
     image: {
         type: String
     },
-    additionalInfo: [additionalInfoSchema]
+    additionalInfo: [additionalInfoSchema],
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    userName: String,
+    userAvatar: String
 }, {
     timestamps: true
 });
