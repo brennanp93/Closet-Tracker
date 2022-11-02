@@ -22,7 +22,7 @@ const additionalInfoSchema = new Schema({
 });
 
 
-const inventorySchema = new Schema({
+const clothesSchema = new Schema({
     itemType: {
         type: String, 
         enum: ['T-Shirt', 'Pant', 'Shirt', 'Boots/Shoes', 'Hat', 'Jacket']
@@ -46,7 +46,6 @@ const inventorySchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true
     },
     userName: String,
     userAvatar: String
@@ -54,4 +53,4 @@ const inventorySchema = new Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('Item', inventorySchema);
+module.exports = mongoose.model('Clothes', clothesSchema);

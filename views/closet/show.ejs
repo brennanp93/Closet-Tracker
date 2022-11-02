@@ -23,15 +23,12 @@
       <td> <%= item.size %></td>
       <td>
         <%if (user?._id.equals(item.user)) {%>
-        <form action="/closet/<%= item._id%>/edit">
-          <button type="submit">Edit</button>
-        </form>
+          <a href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
         <% } %>
       </td>
     </tr>
   </tbody>
 </table>
-<!-- <Button><a href="/closet/<%= item._id%>/edit">EDIT ITEM</a></Button> -->
 
 
 

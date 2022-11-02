@@ -15,18 +15,19 @@ function deleteInfo(req,res) {
         item.save().then(function() {
           res.redirect(`/closet/${item._id}`);
         }).catch(function(err) {
-        //   return next(err);
+          return next(err);
         });
       });
 }
 
 function create(req, res) {
+    console.log("note create")
     req.body.soldDonated = !!req.body.soldDonated;
     Inventory.findById(req.params.id, function(err, item) {
         req.body.user = req.user._id;
         req.body.userName = req.user.name;
         req.body.userAvatar = req.user.avatar;
-
+        console.log(req.body)
         item.additionalInfo.push(req.body);
         item.save(function(err) {
             res.redirect(`/closet/${item.id}`);
