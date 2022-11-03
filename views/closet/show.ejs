@@ -74,9 +74,9 @@
       <!-- <h3>Add Additional Info?</h3> -->
       <% } %>
       <div id="notes-form">
-        <form id="new-form" method="POST" action="/closet/<%= item._id %>/additionalInfo">
+        <form id="new-form" method="POST" action="/closet/<%= item._id %>/additionalInfo" autocomplete="off">
           <label>Notes:</label>
-          <input class="new-item-input" type="text" name="notes">
+          <input class="new-item-input" type="text" name="notes" autocomplete="off">
           <label for="">Sold/Donated?</label>
           <input type="checkbox" name="soldDonated">
           <input id="add-notes-submit" type="submit" value="Add Notes">
