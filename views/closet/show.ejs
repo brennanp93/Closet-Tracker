@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-
+<div id="show-box">
 <div class="category-and-image">
 
   <h1><span>Category:</span> <%= title %></h1>
@@ -29,9 +29,9 @@
   </tbody>
 </table>
 
-<div>
+<div id="edit-item-button">
   <%if (user?._id.equals(item.user)) {%>
-    <a href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
+    <a  href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
     <% } %>
 </div>
 
@@ -76,12 +76,13 @@
       <div id="notes-form">
         <form id="new-form" method="POST" action="/closet/<%= item._id %>/additionalInfo">
           <label>Notes:</label>
-          <input type="text" name="notes">
+          <input class="new-item-input" type="text" name="notes">
           <label for="">Sold/Donated?</label>
           <input type="checkbox" name="soldDonated">
-          <input type="submit" value="Add Notes">
+          <input id="add-notes-submit" type="submit" value="Add Notes">
         </form>
       </div>
-    
+</div>
+
 </div>
         <%- include('../partials/footer') %>

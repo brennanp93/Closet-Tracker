@@ -1,30 +1,23 @@
 <%- include('../partials/header') %>
 
 <div id="new-item-form-box">
-<form action="/closet" method="POST">
-  <div id="item-dropdown">
-    <select name="itemType" >
+  <h2>Add A New Item</h2>
+<form action="/closet" method="POST" autocomplete="off">
+  <!-- <div> -->
+    <select id="item-dropdown" name="itemType" >
       <option value="T-Shirt">T-Shirt</option>
-      <option value="Pants">Pant</option>
+      <option value="Pants">Pants</option>
       <option value="Shirt">Shirt</option>
       <option value="Boots/Shoes">Boots/Shoes</option>
       <option value="Hat">Hat</option>
       <option value="Jacket">Jacket</option>
     </select> 
-  </div>
-  <div class="new-item-form">
-    <input class="'new-item-input" type="text" name="brand" placeholder="Brand">
-  </div> 
-  <div class="new-item-form">
-    <input class="'new-item-input" type="text" name="size" placeholder="Size">
-  </div>  
-  <div class="new-item-form">
-    <input class="'new-item-input" type="text" name="purchaseLocation" placeholder="Purchase Location">
-  </div> 
-  <div class="new-item-form">
-    <input class="'new-item-input" type="text" name="image" placeholder="Add Image">
-  </div>  
-      <input class="new-item-submit" type="submit" value="Submit">
+  <!-- </div> -->
+    <input class="new-item-input" type="text" name="brand" placeholder="Brand" value="">
+    <input class="new-item-input" type="text" name="size" placeholder="Size">
+    <input class="new-item-input" type="text" name="purchaseLocation" placeholder="Purchase Location">
+    <input class="new-item-input" type="text" name="image" placeholder="Add Image">
+    <input class="new-item-submit" type="submit" value="Submit">
 </form>
 </div>
 

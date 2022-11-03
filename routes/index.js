@@ -3,8 +3,12 @@ var router = express.Router();
 const passport = require('passport');
 
 /* GET home page. */
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Welcome!' });
+// });
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'This Is The Home Page' });
+  res.render('index');
 });
 
 
