@@ -1,46 +1,31 @@
 <%- include('../partials/header') %>
+
 <div id="show-box">
-<div class="category-and-image">
+  <div class="category-and-image">
+    <h1><span>Category:</span><%= title %></h1>
+    <img class="single-image" src="<%= item.image %>">
+    <table>
+      <thead>
+        <tr>
+          <th>Brand:</th>
+          <th>Purchase Location:</th>
+          <th>Size:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= item.brand %></td>
+          <td><%= item.purchaseLocation %></td>
+          <td><%= item.size %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="edit-item-button">
+      <a href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
+    </div>
 
-  <h1><span>Category:</span> <%= title %></h1>
+    <% if (item.additionalInfo.length) { %>
 
-  <img class="single-image" src="<%= item.image %>">
-
-
-<table>
-  <thead>
-    <tr>
-      <th>Brand:</th>
-      <th>Purchase Location:</th>
-      <th>Size:</th>
-      <th class="edit-delete-button"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= item.brand %></td>
-      <td><%= item.purchaseLocation %></td>
-      <td> <%= item.size %></td>
-      <td class="edit-delete-button" >
-        
-      </td>
-      
-    </tr>
-  </tbody>
-</table>
-
-<div id="edit-item-button">
-  <%if (user?._id.equals(item.user)) {%>
-    <a  href="/closet/<%= item._id%>/edit">EDIT ITEM</a>
-    <% } %>
-</div>
-
-
-
-
-
-<% if (item.additionalInfo.length) { %>
-  <!-- <div > -->
     <table>
       <thead>
         <tr>
@@ -51,38 +36,33 @@
         </tr>
       </thead>
       <% item.additionalInfo.forEach(function(info) { %>
-        <tbody>
-          <tr>
-            <td><%= info.createdAt.toLocaleDateString() %></td>
-            <td><%= info.notes %></td>
-            <td><%= info.soldDonated ? 'Yes' : 'No' %></td>
-            <td class="edit-delete-button">
-            
-             <%if (user?._id.equals(info.user)) {%>
-              <form action="/closet/<%= info._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
-              </form>
-                <% } %>
-            </td>
-          </tr>
-          <% }); %>
-        </tbody>
-      </table>
-    <!-- </div> -->
-    <% } else { %>
-      <h5>You have not added additional information yet. </h5>
-      <!-- <h3>Add Additional Info?</h3> -->
+      <tbody>
+        <tr>
+          <td><%= info.createdAt.toLocaleDateString() %></td>
+          <td><%= info.notes %></td>
+          <td><%= info.soldDonated ? 'Yes' : 'No' %></td>
+          <td class="edit-delete-button">
+            <form action="/closet/<%= info._id %>?_method=DELETE" method="POST">
+              <button type="submit">X</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+      </tbody>
+    </table>
+      <% } else { %>
+    <h5>You have not added additional information yet. </h5>
       <% } %>
-      <div id="notes-form">
-        <form id="new-form" method="POST" action="/closet/<%= item._id %>/additionalInfo" autocomplete="off">
-          <label>Notes:</label>
-          <input class="new-item-input" type="text" name="notes" autocomplete="off">
-          <label for="">Sold/Donated?</label>
-          <input type="checkbox" name="soldDonated">
-          <input id="add-notes-submit" type="submit" value="Add Notes">
-        </form>
-      </div>
+    <div id="notes-form">
+      <form id="new-form" method="POST" action="/closet/<%= item._id %>/additionalInfo" autocomplete="off">
+        <label>Notes:</label>
+        <input class="new-item-input" type="text" name="notes" autocomplete="off">
+        <label for="">Sold/Donated?</label>
+        <input type="checkbox" name="soldDonated">
+        <input id="add-notes-submit" type="submit" value="Add Notes">
+      </form>
+    </div>
+  </div>
 </div>
 
-</div>
-        <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>
