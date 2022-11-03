@@ -16,6 +16,7 @@ This app also keeps track of the date that the note was made so I can better tra
 - JavaScript
 - HTML
 - CSS
+- EJS
 - Node
 - Mongoose
 
