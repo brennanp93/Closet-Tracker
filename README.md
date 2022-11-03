@@ -25,3 +25,4 @@ This app also keeps track of the date that the note was made so I can better tra
  [Click to visit the app!](https://closet-tracker.herokuapp.com/)
  
 # Next Steps
+- In the future I would like to be able to impliment a "search" and/or "filter" functionality for my closet.
