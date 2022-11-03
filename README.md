@@ -9,7 +9,7 @@ This app also keeps track of the date that the note was made so I can better tra
 <img src="https://i.imgur.com/wTTISZa.png">
 <img src="https://i.imgur.com/AMMhCFd.png">
 <img src="https://i.imgur.com/RWr0KQP.png">
-<!-- <img src=""> -->
+<img src="https://i.imgur.com/0nyZOeY.png">
 
 # Technologies Used:
 

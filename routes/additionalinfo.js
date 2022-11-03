@@ -7,5 +7,4 @@ router.post('/closet/:id/additionalinfo', ensureLoggedIn, additionalInfoCtrl.cre
 
 router.delete('/closet/:id', ensureLoggedIn, additionalInfoCtrl.delete);
 
-
 module.exports = router;

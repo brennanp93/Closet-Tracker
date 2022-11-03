@@ -21,15 +21,14 @@ const additionalInfoSchema = new Schema({
     timestamps: true
 });
 
-
 const clothesSchema = new Schema({
     itemType: {
-        type: String, 
+        type: String,
         enum: ['T-Shirt', 'Pants', 'Shirt', 'Boots/Shoes', 'Hat', 'Jacket']
     },
     brand: {
         type: String
-    }, 
+    },
     size: {
         type: String
     },

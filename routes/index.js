@@ -7,14 +7,9 @@ const passport = require('passport');
 //   res.render('index', { title: 'Welcome!' });
 // });
 
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index');
 });
-
-
-
-
-
 
 router.get('/auth/google', passport.authenticate(
   // Which passport strategy is being used?
@@ -37,8 +32,8 @@ router.get('/oauth2callback', passport.authenticate(
   }
 ));
 
-router.get('/logout', function(req, res) {
-  req.logout(function() {
+router.get('/logout', function (req, res) {
+  req.logout(function () {
     // Change path for your "landing" page
     res.redirect('/');
   });
