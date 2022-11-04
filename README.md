@@ -1,8 +1,8 @@
 # Closet-Tracker App 
-I created this app to track the inventory of my closet! Over the years I have collected a number of items in my closet that mean a lot to me. 
-Because of this, I wanted to be able to upload my favorite pieces of my closet in order to keep track of them as well as notate any important pieces of information. 
-For example, I can add notes indicating if I sold or donated a particular item. I can also add a text note that might tell me if an item fits or not, or maybe there is a hole in the knee of a pair of jeans. 
-This app also keeps track of the date that the note was made so I can better track and additional notes I make.  
+The Closet Tracker was created to keep track of those prized possessions in your closet.
+I wanted a place where I could upload my favorite pieces of clothing - pieces that have a great story or the ones purchased from a small business. 
+The Closet Tracker allows the user to upload images and details of whatever item they choose. From there, you can add additional notes later on if you'd like. 
+For example, maybe you sold or donated a particular item? You can indicate that. You can even add a text note that might remind you if an item fits or not, or maybe there is a hole in the knee of a pair of jeans and when that hole appeared. 
 
 # Screenshots: 
 <img src="https://i.imgur.com/rH8o1pc.png">
@@ -26,3 +26,4 @@ This app also keeps track of the date that the note was made so I can better tra
  
 # Next Steps
 - In the future I would like to be able to impliment a "search" and/or "filter" functionality for my closet.
+- I would also like to add additional "delete" functionality. 
