@@ -18,7 +18,8 @@ For example, maybe you sold or donated a particular item? You can indicate that.
 - CSS
 - EJS
 - Node
-- Mongoose
+- MongoDB / Mongoose
+- Google OAuth
 
 # Visit The App
 
