@@ -6,7 +6,7 @@ For example, maybe you sold or donated a particular item? You can indicate that.
 
 # Screenshots: 
 <img src="https://i.imgur.com/rH8o1pc.png">
-<img src="https://i.imgur.com/0nyZOeY.png">
+<img src="https://i.imgur.com/0k7M9uA.png">
 <img src="https://i.imgur.com/wTTISZa.png">
 <img src="https://i.imgur.com/AMMhCFd.png">
 <img src="https://i.imgur.com/RWr0KQP.png">
