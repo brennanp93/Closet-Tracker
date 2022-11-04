@@ -3,7 +3,7 @@
 <h1 id="closet-page-title"><%= title %></h1>
 <div id="closet-border-box">
 	<% item.forEach(function(i) { %>
-	<figure class="image-format"><a href="/closet/<%=i._id%>"><img id="grid-images" src="<%= i.image %>"></a></figure>
+	<figure><a href="/closet/<%=i._id%>"><img id="grid-images" src="<%= i.image %>"></a></figure>
   <% }); %>
 </div>
 

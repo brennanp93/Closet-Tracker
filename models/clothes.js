@@ -3,53 +3,53 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const additionalInfoSchema = new Schema({
-    notes: {
-        type: String
-    },
-    soldDonated: {
-        type: Boolean,
-        default: false
-    },
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
-    userName: String,
-    userAvatar: String
+  notes: {
+    type: String
+  },
+  soldDonated: {
+    type: Boolean,
+    default: false
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
 }, {
-    timestamps: true
+  timestamps: true
 });
 
 const clothesSchema = new Schema({
-    itemType: {
-        type: String,
-        enum: ['T-Shirt', 'Pants', 'Shirt', 'Boots/Shoes', 'Hat', 'Jacket']
-    },
-    brand: {
-        type: String
-    },
-    size: {
-        type: String
-    },
-    purchaseLocation: {
-        type: String
-    },
-    purchasePrice: {
-        type: Number
-    },
-    image: {
-        type: String
-    },
-    additionalInfo: [additionalInfoSchema],
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-    },
-    userName: String,
-    userAvatar: String
+  itemType: {
+    type: String,
+    enum: ['T-Shirt', 'Pants', 'Shirt', 'Boots/Shoes', 'Hat', 'Jacket']
+  },
+  brand: {
+    type: String
+  },
+  size: {
+    type: String
+  },
+  purchaseLocation: {
+    type: String
+  },
+  purchasePrice: {
+    type: Number
+  },
+  image: {
+    type: String
+  },
+  additionalInfo: [additionalInfoSchema],
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
+  userName: String,
+  userAvatar: String
 }, {
-    timestamps: true
+  timestamps: true
 });
 
 module.exports = mongoose.model('Clothes', clothesSchema);
