@@ -197,6 +197,7 @@ table td {
   border-radius: 10px;
   cursor: pointer;
   font-family: 'Righteous', cursive;
+  color: rgb(78, 74, 70);
 }
 
 .new-item-submit:hover {
