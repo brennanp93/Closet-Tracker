@@ -133,6 +133,7 @@ footer {
   font-family: 'Righteous', cursive;
   text-align: center;
   width: 18%;
+  color: rgb(78, 74, 70);
 }
 
 #edit-item-button a {
@@ -186,8 +187,10 @@ table td {
   padding: 5px;
   background-color: rgb(207,182,149);
   border-radius: 10px;
+  border-color: rgb(110,119,119);
   cursor: pointer;
   font-family: 'Righteous', cursive;
+  color: rgb(78, 74, 70);
 }
 
 #add-notes-submit {
