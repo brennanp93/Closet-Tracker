@@ -6,10 +6,10 @@ For example, maybe you sold or donated a particular item? You can indicate that.
 
 # Screenshots: 
 <img src="https://i.imgur.com/rH8o1pc.png">
+<img src="https://i.imgur.com/0nyZOeY.png">
 <img src="https://i.imgur.com/wTTISZa.png">
 <img src="https://i.imgur.com/AMMhCFd.png">
 <img src="https://i.imgur.com/RWr0KQP.png">
-<img src="https://i.imgur.com/0nyZOeY.png">
 
 # Technologies Used:
 
@@ -23,7 +23,8 @@ For example, maybe you sold or donated a particular item? You can indicate that.
 
 # Visit The App
 
- [Click to visit the app!](https://closet-tracker.herokuapp.com/)
+ - [Click to visit the app!](https://closet-tracker.herokuapp.com/)
+ - [Trello Board](https://trello.com/b/fexVWpLE/closet-app)
  
 # Next Steps
 - In the future I would like to be able to impliment a "search" and/or "filter" functionality for my closet.
